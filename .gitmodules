@@ -1,0 +1,3 @@
+[submodule "desktop-tutorial"]
+	path = desktop-tutorial
+	url = https://github.com/drsavi/fictional-octo-fortnight.git
