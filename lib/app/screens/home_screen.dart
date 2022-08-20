@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../components/menu_component.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key, required this.title}) : super(key: key);
 
@@ -13,7 +15,6 @@ class HomeScreen extends StatefulWidget {
 class _MyHomeScreenState extends State<HomeScreen> {
 
   int _counter = 0;
-  String _text = '';
   final _inputController = TextEditingController();
 
   void _incrementCounter() {
@@ -29,9 +30,8 @@ class _MyHomeScreenState extends State<HomeScreen> {
     });
   }
 
-  void _setString() {
+  void _clear() {
     setState(() {
-      _text = _inputController.text;
       _inputController.clear();
     });
   }
@@ -43,6 +43,10 @@ class _MyHomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+
+      drawer:
+      MenuComponent(context),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -82,9 +86,9 @@ class _MyHomeScreenState extends State<HomeScreen> {
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.black87),
                   ),
                   onPressed: ( ) {
-                    _setString();
+                    _clear();
                   },
-                  child: Text('Salvar'),
+                  child: Text('Limpar'),
                 ),
 
                 TextButton(
