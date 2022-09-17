@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/app/screens/formulary_screen.dart';
 import 'package:primeiro_app/app/screens/home_screen.dart';
-
 import '../screens/galery_screen.dart';
+import '../screens/list_calculator_screen.dart';
 
 Widget MenuComponent(BuildContext context) {
   return Drawer(
@@ -13,7 +13,7 @@ Widget MenuComponent(BuildContext context) {
           decoration: BoxDecoration(
             color: Colors.blue,
           ),
-          child: Text('Menu'),
+          child: Text('MENU'),
         ),
         ListTile(
           title: const Text('HOME'),
@@ -45,7 +45,17 @@ Widget MenuComponent(BuildContext context) {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => GaleryScreen(title: 'FORMULARIO')));
+                    builder: (context) => GaleryScreen(title: 'GALERY')));
+          },
+        ),
+        ListTile(
+          title: const Text('CALCULADORA'),
+          leading: Icon(Icons.ad_units),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ListCalculatorScreen(title: 'CALCULADORA')));
           },
         ),
       ],

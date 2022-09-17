@@ -48,6 +48,12 @@ class _MyGaleryScreenState extends State<GaleryScreen> {
                   height: 300.0,
                   //child: Image.network("https://sonhoastral.com/uploads/content/image/210280/Gato_preto_1_.jpg"),
                   child: Image.asset("assets/images/capi.jpg"),
+                ),
+                Container(
+                  width: 300.0,
+                  height: 300.0,
+                  //child: Image.network("https://sonhoastral.com/uploads/content/image/210280/Gato_preto_1_.jpg"),
+                  child: Image.asset("assets/images/capi.jpg"),
                 )
               ],
             ),
