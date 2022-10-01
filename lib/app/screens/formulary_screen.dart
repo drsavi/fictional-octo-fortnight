@@ -79,20 +79,21 @@ class _MyFormularyScreenState extends State<FormularyScreen> {
                   style: ElevatedButton.styleFrom(
                     shape: CircleBorder(),
                     padding: EdgeInsets.all(20),
-                    primary: Colors.blue, // <-- Button color
-                    onPrimary: Colors.red, // <-- Splash color
+                    primary: Colors.blue,
+                    onPrimary: Colors.red,
                   ),
                 ),
-
-                TextButton(
-                  style: ButtonStyle(
-                    foregroundColor: MaterialStateProperty.all<Color>(Colors.black87),
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-                  ),
-                  onPressed: ( ) {
+                ElevatedButton(
+                  onPressed: () {
                     _cleanList();
                   },
-                  child: Text('LIMPAR'),
+                  child: Icon(Icons.delete, color: Colors.white),
+                  style: ElevatedButton.styleFrom(
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.all(20),
+                    primary: Colors.blue,
+                    onPrimary: Colors.black,
+                  ),
                 ),
               ],
             ),

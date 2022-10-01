@@ -21,6 +21,10 @@ class _MyListCalculatorScreenState extends State<ListCalculatorScreen> {
   final _firstInputController = TextEditingController();
   final _secondInputControlller = TextEditingController();
 
+  void _clean(){
+      _firstInputController.clear();
+      _secondInputControlller.clear();
+  }
 
   void _sumButton() {
     setState(() {
@@ -67,18 +71,19 @@ class _MyListCalculatorScreenState extends State<ListCalculatorScreen> {
     });
   }
 
-  void _clear() {
-    setState(() {
-      _firstInputController.clear();
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _clean,
+          )
+        ],
       ),
       drawer:
       MenuComponent(context),

@@ -12,29 +12,12 @@ class GaleryScreen extends StatefulWidget {
 }
 
 class _MyGaleryScreenState extends State<GaleryScreen> {
-  String _text = '';
-  List _listNames = [];
-  final _inputController = TextEditingController();
-
-  void _cleanList() {
-    setState(() {
-      _listNames.clear();
-    });
-  }
-
-  void _setString() {
-    setState(() {
-      _text = _inputController.text;
-      _listNames.add(_text);
-      _inputController.clear();
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Galery"),
+        title: Text(widget.title),
       ),
       drawer: MenuComponent(context),
       body: Center(
@@ -46,23 +29,15 @@ class _MyGaleryScreenState extends State<GaleryScreen> {
                 Container(
                   width: 300.0,
                   height: 300.0,
-                  //child: Image.network("https://sonhoastral.com/uploads/content/image/210280/Gato_preto_1_.jpg"),
                   child: Image.asset("assets/images/capi.jpg"),
                 ),
                 Container(
                   width: 300.0,
                   height: 300.0,
-                  //child: Image.network("https://sonhoastral.com/uploads/content/image/210280/Gato_preto_1_.jpg"),
-                  child: Image.asset("assets/images/capi.jpg"),
-                )
+                  child: Image.network("https://sonhoastral.com/uploads/content/image/210280/Gato_preto_1_.jpg")
+                ),
               ],
             ),
-
-            // Card(
-            //   child: Container(
-            //     child: Image.network("https://t1.ea.ltmcdn.com/pt/posts/1/7/4/carateristicas_dos_gatos_pretos_21471_600.jpg"),
-            //   ),
-            // ),
           ],
         ),
       ),

@@ -19,7 +19,6 @@ class _MyHomeScreenState extends State<HomeScreen> {
 
   void _incrementCounter() {
     setState(() {
-
       _counter++;
     });
   }
@@ -32,7 +31,7 @@ class _MyHomeScreenState extends State<HomeScreen> {
 
   void _clear() {
     setState(() {
-      _inputController.clear();
+      _counter = 0;
     });
   }
 
@@ -60,14 +59,6 @@ class _MyHomeScreenState extends State<HomeScreen> {
               style: Theme.of(context).textTheme.headline4,
             ),
 
-            TextField(
-              textAlign: TextAlign.center,
-              controller: _inputController,
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -80,7 +71,6 @@ class _MyHomeScreenState extends State<HomeScreen> {
                   },
                   child: Text('Diminuir'),
                 ),
-
                 TextButton(
                   style: ButtonStyle(
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.black87),
@@ -90,7 +80,6 @@ class _MyHomeScreenState extends State<HomeScreen> {
                   },
                   child: Text('Limpar'),
                 ),
-
                 TextButton(
                   style: ButtonStyle(
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
@@ -100,7 +89,6 @@ class _MyHomeScreenState extends State<HomeScreen> {
                   },
                   child: Text('Aumentar'),
                 ),
-
               ],
             ),
           ],

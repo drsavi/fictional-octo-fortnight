@@ -3,6 +3,7 @@ import 'package:primeiro_app/app/screens/formulary_screen.dart';
 import 'package:primeiro_app/app/screens/home_screen.dart';
 import '../screens/galery_screen.dart';
 import '../screens/list_calculator_screen.dart';
+import '../screens/regular_calculator_screen.dart';
 
 Widget MenuComponent(BuildContext context) {
   return Drawer(
@@ -49,13 +50,23 @@ Widget MenuComponent(BuildContext context) {
           },
         ),
         ListTile(
-          title: const Text('CALCULADORA'),
+          title: const Text('CALCULADORA LISTA'),
           leading: Icon(Icons.ad_units),
           onTap: () {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) => ListCalculatorScreen(title: 'CALCULADORA')));
+          },
+        ),
+        ListTile(
+          title: const Text('CALCULADORA NORMAL'),
+          leading: Icon(Icons.ad_units_outlined),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => RegularCalculatorScreen(title: 'CALCULADORA')));
           },
         ),
       ],
