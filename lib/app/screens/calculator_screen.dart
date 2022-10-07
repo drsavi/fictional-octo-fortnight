@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../components/display.dart';
-import '../components/keyboard.dart';
+import '../components/display_component.dart';
+import '../components/keyboard_component.dart';
 import '../components/menu_component.dart';
 import '../materials/memory.dart';
 
