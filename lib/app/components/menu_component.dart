@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_app/app/screens/calculator_screen.dart';
 import 'package:primeiro_app/app/screens/formulary_screen.dart';
 import 'package:primeiro_app/app/screens/home_screen.dart';
 import '../screens/galery_screen.dart';
@@ -67,6 +68,16 @@ Widget MenuComponent(BuildContext context) {
                 context,
                 MaterialPageRoute(
                     builder: (context) => RegularCalculatorScreen(title: 'CALCULADORA')));
+          },
+        ),
+        ListTile(
+          title: const Text('CALCULADORA BRABA'),
+          leading: Icon(Icons.ad_units_outlined),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Calculator(title: 'CALCULADORA BRABA')));
           },
         ),
       ],
