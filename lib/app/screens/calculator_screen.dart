@@ -1,7 +1,4 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../components/display_component.dart';
 import '../components/keyboard_component.dart';
@@ -12,9 +9,6 @@ class Calculator extends StatefulWidget {
   const Calculator({Key? key, required this.title}) : super(key: key);
 
   final String title;
-  //const Calculator({Key? key}) : super(key: key);
-
-
 
   @override
   _CalculatorState createState() => _CalculatorState();
@@ -36,12 +30,6 @@ class _CalculatorState extends State<Calculator> {
       appBar: AppBar(
         title: Text(widget.title),
         centerTitle: true,
-        // actions: [
-        //   IconButton(
-        //     icon: const Icon(Icons.refresh),
-        //     onPressed: _clean,
-        //   )
-        // ],
       ),
       drawer:
       MenuComponent(context),
